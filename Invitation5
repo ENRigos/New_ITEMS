@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΠΡΟΣΚΛΗΣΗ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        a {
+            font-size: 1.5rem;
+            color: #0078D7;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #005A9E;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>ΠΡΟΣΚΛΗΣΗ</h1>
+    <a href="#" onclick="speak()">ΠΡΟΣΚΛΗΣΗ</a>
+
+    <script>
+        function speak() {
+            const text = "Σας Προσκαλούμε στο 2ο Παγκόσμιο Συνέδριο στο Όμορφο Ελληνικό ΚΑΣΤΕΛΛΟΡΙΖΟ";
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "el-GR"; // Greek language
+            utterance.rate = 0.8; // Slow and clear rate
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
